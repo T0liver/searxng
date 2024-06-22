@@ -2,7 +2,7 @@ general:
   # Debug mode, only for development. Is overwritten by ${SEARXNG_DEBUG}
   debug: false
   # displayed name
-  instance_name: "SearXNG"
+  instance_name: "ToliveR"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
@@ -28,13 +28,13 @@ brand:
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
-  safe_search: 0
+  safe_search: 2
   # Existing autocomplete backends: "dbpedia", "duckduckgo", "google", "yandex", "mwmbl",
   # "seznam", "startpage", "stract", "swisscows", "qwant", "wikipedia" - leave blank to turn it off
   # by default.
-  autocomplete: ""
+  autocomplete: "google"
   # minimun characters to type before autocompleter starts
-  autocomplete_min: 4
+  autocomplete_min: 3
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
   default_lang: "auto"
@@ -95,7 +95,7 @@ server:
   http_protocol_version: "1.0"
   # POST queries are more secure as they don't show up in history but may cause
   # problems when using Firefox containers
-  method: "POST"
+  method: "GET"
   default_http_headers:
     X-Content-Type-Options: nosniff
     X-Download-Options: noopen
@@ -323,7 +323,6 @@ engines:
   - name: 9gag
     engine: 9gag
     shortcut: 9g
-    disabled: true
 
   - name: annas archive
     engine: annas_archive
@@ -342,7 +341,6 @@ engines:
     engine: apkmirror
     timeout: 4.0
     shortcut: apkm
-    disabled: true
 
   - name: apple app store
     engine: apple_app_store
@@ -415,7 +413,6 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
 
   - name: bing images
     engine: bing_images
@@ -488,7 +485,6 @@ engines:
     engine: cppreference
     shortcut: cpp
     paging: false
-    disabled: true
 
   - name: crossref
     engine: crossref
@@ -516,14 +512,12 @@ engines:
     categories: general
     search_type: web
     timeout: 5
-    disabled: true
 
   - name: yep images
     engine: yep
     shortcut: yepi
     categories: images
     search_type: images
-    disabled: true
 
   - name: yep news
     engine: yep
@@ -536,7 +530,6 @@ engines:
     engine: xpath
     shortcut: cl
     categories: general
-    disabled: true
     paging: true
     lang_all: ''
     search_url: https://curlie.org/search?q={query}&lang={lang}&start={pageno}&stime=92452189
@@ -603,7 +596,6 @@ engines:
     engine: duckduckgo_definitions
     shortcut: ddd
     weight: 2
-    disabled: true
     tests: *tests_infobox
 
   # cloudflare protected
@@ -671,44 +663,37 @@ engines:
     categories: [images, web]
     ddg_category: images
     shortcut: ddi
-    disabled: true
 
   - name: duckduckgo videos
     engine: duckduckgo_extra
     categories: [videos, web]
     ddg_category: videos
     shortcut: ddv
-    disabled: true
 
   - name: duckduckgo news
     engine: duckduckgo_extra
     categories: [news, web]
     ddg_category: news
     shortcut: ddn
-    disabled: true
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
-    disabled: true
 
   - name: apple maps
     engine: apple_maps
     shortcut: apm
-    disabled: true
     timeout: 5.0
 
   - name: emojipedia
     engine: emojipedia
     timeout: 4.0
     shortcut: em
-    disabled: true
 
   - name: tineye
     engine: tineye
     shortcut: tin
     timeout: 9.0
-    disabled: true
 
   - name: etymonline
     engine: xpath
@@ -744,12 +729,10 @@ engines:
   - name: fdroid
     engine: fdroid
     shortcut: fd
-    disabled: true
 
   - name: findthatmeme
     engine: findthatmeme
     shortcut: ftm
-    disabled: true
 
   - name: flickr
     categories: images
@@ -768,7 +751,6 @@ engines:
     base_url: https://directory.fsf.org/
     search_type: title
     timeout: 5.0
-    disabled: true
     about:
       website: https://directory.fsf.org/
       wikidata_id: Q2470288
@@ -830,7 +812,6 @@ engines:
     engine: gitea
     base_url: https://codeberg.org
     shortcut: cb
-    disabled: true
 
   - name: gitea.com
     engine: gitea
@@ -883,7 +864,6 @@ engines:
     categories: [files, apps]
     shortcut: gpa
     play_categ: apps
-    disabled: true
 
   - name: google play movies
     engine: google_play
@@ -941,7 +921,6 @@ engines:
   - name: hackernews
     engine: hackernews
     shortcut: hn
-    disabled: true
 
   - name: hex
     engine: hex
@@ -979,12 +958,10 @@ engines:
     engine: imdb
     shortcut: imdb
     timeout: 6.0
-    disabled: true
 
   - name: imgur
     engine: imgur
     shortcut: img
-    disabled: true
 
   - name: ina
     engine: ina
@@ -1007,7 +984,6 @@ engines:
       - https://inv.tux.pizza
     shortcut: iv
     timeout: 3.0
-    disabled: true
 
   - name: jisho
     engine: jisho
@@ -1204,7 +1180,6 @@ engines:
     engine: npm
     shortcut: npm
     timeout: 5.0
-    disabled: true
 
   - name: nyaa
     engine: nyaa
@@ -1303,7 +1278,6 @@ engines:
     content_xpath: //li[@class="search-result"]//div[@class="search-snippet-info"]//p[@class="search-snippet"]
     categories: files
     timeout: 4.0
-    disabled: true
     shortcut: or
     about:
       website: https://openrepos.net/
@@ -1613,7 +1587,6 @@ engines:
     shortcut: dpy
     base_url: 'https://discuss.python.org'
     categories: [it, q&a]
-    disabled: true
 
   - name: caddy.community
     engine: discourse
@@ -1854,7 +1827,6 @@ engines:
     categories: [general, wikimedia]
     base_url: "https://{language}.wikibooks.org/"
     search_type: text
-    disabled: true
     about:
       website: https://www.wikibooks.org/
       wikidata_id: Q367
@@ -2023,7 +1995,6 @@ engines:
   - name: duden
     engine: duden
     shortcut: du
-    disabled: true
 
   - name: seznam
     shortcut: szn
