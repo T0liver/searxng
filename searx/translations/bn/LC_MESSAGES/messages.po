@@ -18,10 +18,10 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-06-07 12:50+0000\n"
-"PO-Revision-Date: 2024-05-25 08:18+0000\n"
-"Last-Translator: MusfiquerRhman "
-"<MusfiquerRhman@users.noreply.translate.codeberg.org>\n"
+"POT-Creation-Date: 2024-12-16 08:30+0000\n"
+"PO-Revision-Date: 2024-11-25 12:40+0000\n"
+"Last-Translator: return42 <return42@users.noreply.translate.codeberg.org>"
+"\n"
 "Language: bn\n"
 "Language-Team: Bengali "
 "<https://translate.codeberg.org/projects/searxng/searxng/bn/>\n"
@@ -29,7 +29,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.15.0\n"
+"Generated-By: Babel 2.16.0\n"
 
 #. CONSTANT_NAMES['NO_SUBGROUPING']
 #: searx/searxng.msg
@@ -166,6 +166,11 @@ msgstr "সাদা"
 msgid "dark"
 msgstr "কালো"
 
+#. STYLE_NAMES['BLACK']
+#: searx/searxng.msg
+msgid "black"
+msgstr ""
+
 #. BRAND_CUSTOM_LINKS['UPTIME']
 #: searx/searxng.msg
 msgid "Uptime"
@@ -177,21 +182,23 @@ msgid "About"
 msgstr "সম্বন্ধে"
 
 #. WEATHER_TERMS['AVERAGE TEMP.']
-#: searx/searxng.msg
+#: searx/engines/wttr.py:32 searx/searxng.msg
 msgid "Average temp."
 msgstr "গড় তাপমাত্রা"
 
 #. WEATHER_TERMS['CLOUD COVER']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:91 searx/searxng.msg
 msgid "Cloud cover"
 msgstr "মেঘলা"
 
 #. WEATHER_TERMS['CONDITION']
+#: searx/engines/duckduckgo_weather.py:45 searx/engines/wttr.py:51
 #: searx/searxng.msg
 msgid "Condition"
 msgstr "অবস্থা"
 
 #. WEATHER_TERMS['CURRENT CONDITION']
+#: searx/engines/duckduckgo_weather.py:118 searx/engines/wttr.py:104
 #: searx/searxng.msg
 msgid "Current condition"
 msgstr "বর্তমান অবস্থা"
@@ -202,21 +209,25 @@ msgid "Evening"
 msgstr "সন্ধ্যা"
 
 #. WEATHER_TERMS['FEELS LIKE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:53 searx/engines/open_meteo.py:81
+#: searx/engines/wttr.py:59 searx/searxng.msg
 msgid "Feels like"
 msgstr "অনুভব হয়"
 
 #. WEATHER_TERMS['HUMIDITY']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:64 searx/engines/open_meteo.py:93
+#: searx/engines/wttr.py:68 searx/searxng.msg
 msgid "Humidity"
 msgstr "আদ্রতা"
 
 #. WEATHER_TERMS['MAX TEMP.']
+#: searx/engines/duckduckgo_weather.py:77 searx/engines/wttr.py:34
 #: searx/searxng.msg
 msgid "Max temp."
 msgstr "সর্বোচ্চ তাপমাত্রা"
 
 #. WEATHER_TERMS['MIN TEMP.']
+#: searx/engines/duckduckgo_weather.py:73 searx/engines/wttr.py:33
 #: searx/searxng.msg
 msgid "Min temp."
 msgstr "সর্বনিন্ম তাপমাত্রা"
@@ -237,72 +248,79 @@ msgid "Noon"
 msgstr "দুপুর"
 
 #. WEATHER_TERMS['PRESSURE']
-#: searx/searxng.msg
+#: searx/engines/open_meteo.py:95 searx/searxng.msg
 msgid "Pressure"
 msgstr "চাপ"
 
 #. WEATHER_TERMS['SUNRISE']
+#: searx/engines/duckduckgo_weather.py:81 searx/engines/wttr.py:36
 #: searx/searxng.msg
 msgid "Sunrise"
 msgstr "সূর্যোদয়"
 
 #. WEATHER_TERMS['SUNSET']
+#: searx/engines/duckduckgo_weather.py:82 searx/engines/wttr.py:37
 #: searx/searxng.msg
 msgid "Sunset"
 msgstr "সূর্যাস্ত"
 
 #. WEATHER_TERMS['TEMPERATURE']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:48 searx/engines/open_meteo.py:76
+#: searx/engines/wttr.py:55 searx/searxng.msg
 msgid "Temperature"
 msgstr "তাপমাত্রা"
 
 #. WEATHER_TERMS['UV INDEX']
+#: searx/engines/duckduckgo_weather.py:80 searx/engines/wttr.py:35
 #: searx/searxng.msg
 msgid "UV index"
 msgstr "ইউ ভি ইনডেক্স"
 
 #. WEATHER_TERMS['VISIBILITY']
+#: searx/engines/duckduckgo_weather.py:62 searx/engines/wttr.py:66
 #: searx/searxng.msg
 msgid "Visibility"
 msgstr "দৃশ্যগোচর"
 
 #. WEATHER_TERMS['WIND']
-#: searx/searxng.msg
+#: searx/engines/duckduckgo_weather.py:58 searx/engines/open_meteo.py:86
+#: searx/engines/wttr.py:62 searx/searxng.msg
 msgid "Wind"
 msgstr "বায়ু"
 
 #. SOCIAL_MEDIA_TERMS['SUBSCRIBERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:85 searx/searxng.msg
 msgid "subscribers"
 msgstr "সাবস্ক্রাইবারস"
 
 #. SOCIAL_MEDIA_TERMS['POSTS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:86 searx/searxng.msg
 msgid "posts"
 msgstr "পোস্টস"
 
 #. SOCIAL_MEDIA_TERMS['ACTIVE USERS']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:87 searx/searxng.msg
 msgid "active users"
 msgstr "সক্রিয় ইউজারস"
 
 #. SOCIAL_MEDIA_TERMS['COMMENTS']
-#: searx/searxng.msg
+#: searx/engines/discourse.py:157 searx/engines/hackernews.py:82
+#: searx/engines/lemmy.py:130 searx/searxng.msg
 msgid "comments"
 msgstr "কমেন্ট"
 
 #. SOCIAL_MEDIA_TERMS['USER']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:129 searx/engines/lemmy.py:164 searx/searxng.msg
 msgid "user"
 msgstr "ইউজার"
 
 #. SOCIAL_MEDIA_TERMS['COMMUNITY']
-#: searx/searxng.msg
+#: searx/engines/lemmy.py:131 searx/engines/lemmy.py:165 searx/searxng.msg
 msgid "community"
 msgstr "কমিউনিটি"
 
 #. SOCIAL_MEDIA_TERMS['POINTS']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:82 searx/searxng.msg
 msgid "points"
 msgstr "পয়েন্টস"
 
@@ -312,47 +330,47 @@ msgid "title"
 msgstr "শিরোনাম"
 
 #. SOCIAL_MEDIA_TERMS['AUTHOR']
-#: searx/searxng.msg
+#: searx/engines/hackernews.py:85 searx/searxng.msg
 msgid "author"
 msgstr "লেখক"
 
 #. SOCIAL_MEDIA_TERMS['THREAD OPEN']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "open"
-msgstr ""
+msgstr "খুলো"
 
 #. SOCIAL_MEDIA_TERMS['THREAD CLOSED']
-#: searx/engines/discourse.py:121 searx/searxng.msg
+#: searx/engines/discourse.py:149 searx/searxng.msg
 msgid "closed"
-msgstr ""
+msgstr "বন্ধ"
 
 #. SOCIAL_MEDIA_TERMS['THREAD ANSWERED']
-#: searx/engines/discourse.py:132 searx/searxng.msg
+#: searx/engines/discourse.py:160 searx/searxng.msg
 msgid "answered"
-msgstr ""
+msgstr "উত্তরকৃত"
 
-#: searx/webapp.py:330
+#: searx/webapp.py:323
 msgid "No item found"
 msgstr "কোন আইটেম পাওয়া যায়নি"
 
-#: searx/engines/qwant.py:281
-#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:332
+#: searx/engines/qwant.py:288
+#: searx/templates/simple/result_templates/images.html:23 searx/webapp.py:325
 msgid "Source"
 msgstr "উৎস"
 
-#: searx/webapp.py:334
+#: searx/webapp.py:327
 msgid "Error loading the next page"
 msgstr "পরবর্তী পৃষ্ঠাটি লোড করায় ত্রুটি দেখা যাচ্ছে"
 
-#: searx/webapp.py:491 searx/webapp.py:887
+#: searx/webapp.py:496 searx/webapp.py:904
 msgid "Invalid settings, please edit your preferences"
 msgstr "অকেজো সেটিংস, অনুগ্রহ করে আপনার পছন্দগুলি সম্পাদনা করুন"
 
-#: searx/webapp.py:507
+#: searx/webapp.py:512
 msgid "Invalid settings"
 msgstr "অকেজো সেটিংস"
 
-#: searx/webapp.py:584 searx/webapp.py:666
+#: searx/webapp.py:589 searx/webapp.py:679
 msgid "search error"
 msgstr "সার্চ ত্রুটি"
 
@@ -420,21 +438,25 @@ msgstr "{minutes} মিনিট আগে"
 msgid "{hours} hour(s), {minutes} minute(s) ago"
 msgstr "{hours} ঘণ্টা, {minutes} মিনিট আগে"
 
-#: searx/answerers/random/answerer.py:75
+#: searx/answerers/random/answerer.py:76
 msgid "Random value generator"
 msgstr "এলোমেলো মান জেনারেটর"
 
-#: searx/answerers/random/answerer.py:76
+#: searx/answerers/random/answerer.py:77
 msgid "Generate different random values"
 msgstr "বিভিন্ন এলোমেলো মান তৈরি করুন"
 
-#: searx/answerers/statistics/answerer.py:48
+#: searx/answerers/statistics/answerer.py:50
 msgid "Statistics functions"
 msgstr "পরিসংখ্যান কার্যাবলী"
 
-#: searx/answerers/statistics/answerer.py:49
+#: searx/answerers/statistics/answerer.py:51
 msgid "Compute {functions} of the arguments"
 msgstr "আর্গুমেন্টগুলির {functions} গণনা করুন৷"
+
+#: searx/engines/mozhi.py:57
+msgid "Synonyms"
+msgstr ""
 
 #: searx/engines/openstreetmap.py:159
 msgid "Get directions"
@@ -448,7 +470,7 @@ msgstr "{title} (অচল)"
 msgid "This entry has been superseded by"
 msgstr "এই এনট্রিটি দ্বারা বাতিল করা হয়েছে৷"
 
-#: searx/engines/qwant.py:283
+#: searx/engines/qwant.py:290
 msgid "Channel"
 msgstr "চ্যানেল"
 
@@ -465,7 +487,7 @@ msgid "clicks"
 msgstr "ক্লিক সংখ্যা"
 
 #: searx/engines/seekr.py:193 searx/engines/yummly.py:71
-#: searx/engines/zlibrary.py:128
+#: searx/engines/zlibrary.py:137
 msgid "Language"
 msgstr "ভাষা"
 
@@ -477,7 +499,7 @@ msgstr ""
 "{numCitations} উদ্ধৃতি সাল {firstCitationVelocityYear} থেকে "
 "{lastCitationVelocityYear}"
 
-#: searx/engines/tineye.py:39
+#: searx/engines/tineye.py:45
 msgid ""
 "Could not read that image url. This may be due to an unsupported file "
 "format. TinEye only supports images that are JPEG, PNG, GIF, BMP, TIFF or"
@@ -487,7 +509,7 @@ msgstr ""
 "পারার জন্যে। TinEye কেবল JPEG, PNG, GIF, BMP, TIFF আর WebP ফরম্যাট কে "
 "পড়তে পারে।"
 
-#: searx/engines/tineye.py:45
+#: searx/engines/tineye.py:51
 msgid ""
 "The image is too simple to find matches. TinEye requires a basic level of"
 " visual detail to successfully identify matches."
@@ -495,19 +517,19 @@ msgstr ""
 "এই ছবিটি খুবই সাধারণ হওয়ায় কোন মিল পাওয়া যাচ্ছে না। TinEye এর একটু "
 "চাক্ষুষ বিস্তর প্রয়োজন সফল ভাবে মিল পাওয়ার জন্যে ।"
 
-#: searx/engines/tineye.py:51
+#: searx/engines/tineye.py:57
 msgid "The image could not be downloaded."
 msgstr "ছবিটি ডাউনলোড করা যায়নি ।"
 
-#: searx/engines/zlibrary.py:129
+#: searx/engines/zlibrary.py:138
 msgid "Book rating"
 msgstr "বই পর্যালোচনা"
 
-#: searx/engines/zlibrary.py:130
+#: searx/engines/zlibrary.py:139
 msgid "File quality"
 msgstr "নথি মান"
 
-#: searx/plugins/calculator.py:12
+#: searx/plugins/calculator.py:18
 msgid "Calculate mathematical expressions via the search bar"
 msgstr "সার্চ বারের মাধমে গানিতিক সমীকরণ সমাধান করুন"
 
@@ -519,17 +541,13 @@ msgstr "স্ট্রিংগুলিকে বিভিন্ন হ্য�
 msgid "hash digest"
 msgstr "হ্যাশ ডাইজেস্ট"
 
-#: searx/plugins/hostname_replace.py:7
-msgid "Hostname replace"
-msgstr "হোস্টনাম প্রতিস্থাপন"
-
-#: searx/plugins/hostnames.py:68
+#: searx/plugins/hostnames.py:103
 msgid "Hostnames plugin"
-msgstr ""
+msgstr "হোস্টনেম প্লাগিন"
 
-#: searx/plugins/hostnames.py:69
+#: searx/plugins/hostnames.py:104
 msgid "Rewrite hostnames, remove results or prioritize them based on the hostname"
-msgstr ""
+msgstr "হোস্টনাম পুনর্লিখন করো, ফলাফল অপসারণ করো বা হোস্টনামের ভিত্তিতে সাজাও"
 
 #: searx/plugins/oa_doi_rewrite.py:12
 msgid "Open Access DOI rewrite"
@@ -554,6 +572,14 @@ msgid ""
 msgstr ""
 "ক্যোয়ারীটি \"ip\" হলে আপনার আইপি এবং যদি ক্যোয়ারীতে \"ব্যবহারকারী "
 "এজেন্ট\" থাকে তাহলে আপনার ব্যবহারকারী এজেন্ট প্রদর্শন করে।"
+
+#: searx/plugins/self_info.py:28
+msgid "Your IP is: "
+msgstr "তোমার আইপি: "
+
+#: searx/plugins/self_info.py:31
+msgid "Your user-agent is: "
+msgstr "তোমার ইউজার-এজেন্ট: "
 
 #: searx/plugins/tor_check.py:24
 msgid "Tor check plugin"
@@ -659,27 +685,31 @@ msgstr "ইন্সট্যান্স রক্ষণাবেক্ষণ�
 msgid "Click on the magnifier to perform search"
 msgstr "অনুসন্ধান করতে ম্যাগনিফায়ার আইকনে ক্লিক করুন"
 
-#: searx/templates/simple/macros.html:35
+#: searx/templates/simple/macros.html:40
 msgid "Length"
 msgstr "দৈর্ঘ্য"
 
-#: searx/templates/simple/macros.html:36
+#: searx/templates/simple/macros.html:41
+msgid "Views"
+msgstr "ভিউ"
+
+#: searx/templates/simple/macros.html:42
 #: searx/templates/simple/result_templates/files.html:34
 #: searx/templates/simple/result_templates/images.html:19
 #: searx/templates/simple/result_templates/paper.html:6
 msgid "Author"
 msgstr "লেখক"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:50
 msgid "cached"
 msgstr "ক্যাশকৃত"
 
-#: searx/templates/simple/macros.html:44
+#: searx/templates/simple/macros.html:50
 msgid "proxied"
 msgstr "প্রক্সিকৃত"
 
 #: searx/templates/simple/new_issue.html:64
-msgid "Start submiting a new issue on GitHub"
+msgid "Start submitting a new issue on GitHub"
 msgstr "GitHub এ একটি নতুন সমস্যা জমা দেওয়া শুরু করুন"
 
 #: searx/templates/simple/new_issue.html:66
@@ -706,7 +736,7 @@ msgstr "উপরের তথ্য সহ Github এ একটি নতুন
 msgid "No HTTPS"
 msgstr "HTTPS নেই"
 
-#: searx/templates/simple/elements/engines_msg.html:18
+#: searx/templates/simple/elements/engines_msg.html:14
 #: searx/templates/simple/preferences.html:69
 #: searx/templates/simple/preferences.html:70
 msgid "View error logs and submit a bug report"
@@ -751,27 +781,27 @@ msgstr "সাধারণ"
 msgid "Default categories"
 msgstr "ডিফল্ট বিভাগ"
 
-#: searx/templates/simple/preferences.html:187
+#: searx/templates/simple/preferences.html:190
 msgid "User interface"
 msgstr "ব‍্যবহারকারীর সম্মুখে প্রদর্শিত"
 
-#: searx/templates/simple/preferences.html:208
+#: searx/templates/simple/preferences.html:212
 msgid "Privacy"
 msgstr "গোপনীয়তা"
 
-#: searx/templates/simple/preferences.html:221
+#: searx/templates/simple/preferences.html:225
 msgid "Engines"
 msgstr "ইঞ্জিন"
 
-#: searx/templates/simple/preferences.html:223
+#: searx/templates/simple/preferences.html:227
 msgid "Currently used search engines"
 msgstr "বর্তমানে ব্যবহৃত সার্চ ইঞ্জিন"
 
-#: searx/templates/simple/preferences.html:231
+#: searx/templates/simple/preferences.html:235
 msgid "Special Queries"
 msgstr "বিশেষ প্রশ্ন"
 
-#: searx/templates/simple/preferences.html:237
+#: searx/templates/simple/preferences.html:241
 msgid "Cookies"
 msgstr "কুকি"
 
@@ -787,19 +817,19 @@ msgstr "ফলাফলের সংখ্যা"
 msgid "Info"
 msgstr "তথ্য"
 
-#: searx/templates/simple/results.html:77
+#: searx/templates/simple/results.html:75
 msgid "Try searching for:"
 msgstr "এটি খোঁজার চেষ্টা করুন:"
 
-#: searx/templates/simple/results.html:109
+#: searx/templates/simple/results.html:107
 msgid "Back to top"
 msgstr "উপরে ফিরে যান"
 
-#: searx/templates/simple/results.html:127
+#: searx/templates/simple/results.html:125
 msgid "Previous page"
 msgstr "পূর্ববর্তী পেইজ"
 
-#: searx/templates/simple/results.html:145
+#: searx/templates/simple/results.html:143
 msgid "Next page"
 msgstr "পরবর্তী পেইজ"
 
@@ -839,6 +869,7 @@ msgstr "স্কোর"
 msgid "Result count"
 msgstr "ফলাফল গণনা"
 
+#: searx/templates/simple/elements/engines_msg.html:7
 #: searx/templates/simple/preferences/engines.html:31
 #: searx/templates/simple/stats.html:28
 msgid "Response time"
@@ -914,17 +945,13 @@ msgstr "মন্তব্য"
 msgid "Download results"
 msgstr "ডাউনলোডগুলোর ফলাফল"
 
-#: searx/templates/simple/elements/engines_msg.html:7
+#: searx/templates/simple/elements/engines_msg.html:4
 msgid "Messages from the search engines"
 msgstr "সার্চ ইঞ্জিন থেকে বার্তা"
 
-#: searx/templates/simple/elements/engines_msg.html:12
-msgid "Error!"
-msgstr "ত্রুটি!"
-
-#: searx/templates/simple/elements/engines_msg.html:13
-msgid "Engines cannot retrieve results"
-msgstr "ইঞ্জিন ফলাফল পুনরুদ্ধার করতে পারেছেনা"
+#: searx/templates/simple/elements/engines_msg.html:7
+msgid "seconds"
+msgstr "সেকেন্ড"
 
 #: searx/templates/simple/elements/search_url.html:3
 msgid "Search URL"
@@ -949,12 +976,12 @@ msgstr "প্রস্তাবিত"
 msgid "Search language"
 msgstr "সার্চের ভাষা"
 
-#: searx/templates/simple/filters/languages.html:2
+#: searx/templates/simple/filters/languages.html:4
 #: searx/templates/simple/preferences/language.html:7
 msgid "Default language"
 msgstr "পূর্বনির্ধারিত ভাষা"
 
-#: searx/templates/simple/filters/languages.html:4
+#: searx/templates/simple/filters/languages.html:8
 #: searx/templates/simple/preferences/language.html:11
 msgid "Auto-detect"
 msgstr "স্বয়ং সনাক্ত"
@@ -1192,6 +1219,14 @@ msgstr "ওজন"
 msgid "Max time"
 msgstr "সর্বোচ্চ সময়"
 
+#: searx/templates/simple/preferences/favicon.html:2
+msgid "Favicon Resolver"
+msgstr ""
+
+#: searx/templates/simple/preferences/favicon.html:15
+msgid "Display favicons near search results"
+msgstr ""
+
 #: searx/templates/simple/preferences/footer.html:2
 msgid ""
 "These settings are stored in your cookies, this allows us not to store "
@@ -1338,6 +1373,26 @@ msgstr "ইন্টারফেসের ভাষা"
 msgid "Change the language of the layout"
 msgstr "লে আউটের ভাষা পরিবর্তন করুন"
 
+#: searx/templates/simple/preferences/urlformatting.html:2
+msgid "URL formatting"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:8
+msgid "Pretty"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:13
+msgid "Full"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:18
+msgid "Host"
+msgstr ""
+
+#: searx/templates/simple/preferences/urlformatting.html:23
+msgid "Change result URL formatting"
+msgstr ""
+
 #: searx/templates/simple/result_templates/code.html:13
 msgid "repo"
 msgstr "ভাণ্ডার"
@@ -1364,36 +1419,11 @@ msgstr "এই সাইট কোন বিবরণ প্রদান কর�
 msgid "Filesize"
 msgstr "ফাইলের আকার"
 
-#: searx/templates/simple/result_templates/files.html:39
-#: searx/templates/simple/result_templates/torrent.html:12
-msgid "Bytes"
-msgstr "বাইটস"
-
 #: searx/templates/simple/result_templates/files.html:40
-#: searx/templates/simple/result_templates/torrent.html:13
-msgid "kiB"
-msgstr "কিবা"
-
-#: searx/templates/simple/result_templates/files.html:41
-#: searx/templates/simple/result_templates/torrent.html:14
-msgid "MiB"
-msgstr "মিবা"
-
-#: searx/templates/simple/result_templates/files.html:42
-#: searx/templates/simple/result_templates/torrent.html:15
-msgid "GiB"
-msgstr "গিবা"
-
-#: searx/templates/simple/result_templates/files.html:43
-#: searx/templates/simple/result_templates/torrent.html:16
-msgid "TiB"
-msgstr "টেবা"
-
-#: searx/templates/simple/result_templates/files.html:47
 msgid "Date"
 msgstr "তারিখ"
 
-#: searx/templates/simple/result_templates/files.html:49
+#: searx/templates/simple/result_templates/files.html:42
 #: searx/templates/simple/result_templates/paper.html:24
 msgid "Type"
 msgstr "ধরন"
@@ -1511,7 +1541,7 @@ msgstr "সিডার"
 msgid "Leecher"
 msgstr "লিচার"
 
-#: searx/templates/simple/result_templates/torrent.html:20
+#: searx/templates/simple/result_templates/torrent.html:13
 msgid "Number of Files"
 msgstr "ফাইলের সংখ্যা"
 
@@ -1697,4 +1727,34 @@ msgstr "ভিডিও লুকিয়ে ফেলুন"
 #~ "ফলাফল হোস্টনাম পুনরায় লিখুন বা "
 #~ "হোস্টনামের উপর ভিত্তি করে ফলাফল মুছে "
 #~ "ফেলুন"
+
+#~ msgid "Bytes"
+#~ msgstr "বাইটস"
+
+#~ msgid "kiB"
+#~ msgstr "কিবা"
+
+#~ msgid "MiB"
+#~ msgstr "মিবা"
+
+#~ msgid "GiB"
+#~ msgstr "গিবা"
+
+#~ msgid "TiB"
+#~ msgstr "টেবা"
+
+#~ msgid "Hostname replace"
+#~ msgstr "হোস্টনাম প্রতিস্থাপন"
+
+#~ msgid "Error!"
+#~ msgstr "ত্রুটি!"
+
+#~ msgid "Engines cannot retrieve results"
+#~ msgstr "ইঞ্জিন ফলাফল পুনরুদ্ধার করতে পারেছেনা"
+
+#~ msgid "Start submiting a new issue on GitHub"
+#~ msgstr "GitHub এ একটি নতুন সমস্যা জমা দেওয়া শুরু করুন"
+
+#~ msgid "dummy"
+#~ msgstr ""
 
