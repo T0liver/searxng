@@ -2,9 +2,9 @@
 
 ----
 
-.. figure:: https://raw.githubusercontent.com/searxng/searxng/master/client/simple/src/brand/searxng.svg
+.. figure:: https://raw.githubusercontent.com/T0liver/searxng/master/client/simple/src/brand/searxng.svg
    :target: https://docs.searxng.org/
-   :alt: SearXNG
+   :alt: SearXNG_ToliveR
    :width: 100%
    :align: center
 
