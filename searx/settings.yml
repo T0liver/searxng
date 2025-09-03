@@ -2,20 +2,20 @@ general:
   # Debug mode, only for development. Is overwritten by ${SEARXNG_DEBUG}
   debug: false
   # displayed name
-  instance_name: "SearXNG"
+  instance_name: "ToliveR"
   # For example: https://example.com/privacy
   privacypolicy_url: false
   # use true to use your own donation page written in searx/info/en/donate.md
   # use false to disable the donation link
   donation_url: false
   # mailto:contact@example.com
-  contact_url: false
+  contact_url: mailto:keres@toliver.hu
   # record stats
   enable_metrics: true
   # expose stats in open metrics format at /metrics
   # leave empty to disable (no password set)
   # open_metrics: <password>
-  open_metrics: ''
+  open_metrics: '1234'
 
 brand:
   new_issue_url: https://github.com/searxng/searxng/issues/new
@@ -32,16 +32,16 @@ brand:
 
 search:
   # Filter results. 0: None, 1: Moderate, 2: Strict
-  safe_search: 0
+  safe_search: 2
   # Existing autocomplete backends: "360search", "baidu", "brave", "dbpedia", "duckduckgo", "google", "yandex",
   # "mwmbl", "naver", "seznam", "sogou", "startpage", "stract", "swisscows", "quark", "qwant", "wikipedia" -
   # leave blank to turn it off by default.
-  autocomplete: ""
+  autocomplete: "google"
   # minimun characters to type before autocompleter starts
-  autocomplete_min: 4
+  autocomplete_min: 2
   # backend for the favicon near URL in search results.
   # Available resolvers: "allesedv", "duckduckgo", "google", "yandex" - leave blank to turn it off by default.
-  favicon_resolver: ""
+  favicon_resolver: "google"
   # Default search language - leave blank to detect from browser information or
   # use codes from 'languages.py'
   default_lang: "auto"
@@ -104,7 +104,7 @@ server:
   # annoyances, which is why GET may be better for end users and their browsers.
   # see https://github.com/searxng/searxng/pull/3619
   # Is overwritten by ${SEARXNG_METHOD}
-  method: "POST"
+  method: "GET"
   default_http_headers:
     X-Content-Type-Options: nosniff
     X-Download-Options: noopen
@@ -442,7 +442,6 @@ engines:
     engine: apkmirror
     timeout: 4.0
     shortcut: apkm
-    disabled: true
 
   - name: apple app store
     engine: apple_app_store
@@ -548,14 +547,17 @@ engines:
   - name: bing images
     engine: bing_images
     shortcut: bii
+    disabled: true
 
   - name: bing news
     engine: bing_news
     shortcut: bin
+    disabled: true
 
   - name: bing videos
     engine: bing_videos
     shortcut: biv
+    disabled: true
 
   - name: bitchute
     engine: bitchute
@@ -670,7 +672,6 @@ engines:
     engine: cppreference
     shortcut: cpp
     paging: false
-    disabled: true
 
   - name: crossref
     engine: crossref
@@ -735,6 +736,7 @@ engines:
     engine: deviantart
     shortcut: da
     timeout: 3.0
+    disabled: true
 
   - name: ddg definitions
     engine: duckduckgo_definitions
@@ -827,26 +829,22 @@ engines:
     categories: [images, web]
     ddg_category: images
     shortcut: ddi
-    disabled: true
 
   - name: duckduckgo videos
     engine: duckduckgo_extra
     categories: [videos, web]
     ddg_category: videos
     shortcut: ddv
-    disabled: true
 
   - name: duckduckgo news
     engine: duckduckgo_extra
     categories: [news, web]
     ddg_category: news
     shortcut: ddn
-    disabled: true
 
   - name: duckduckgo weather
     engine: duckduckgo_weather
     shortcut: ddw
-    disabled: true
 
   - name: apple maps
     engine: apple_maps
@@ -858,7 +856,6 @@ engines:
     engine: emojipedia
     timeout: 4.0
     shortcut: em
-    disabled: true
 
   - name: tineye
     engine: tineye
@@ -905,7 +902,6 @@ engines:
   - name: findthatmeme
     engine: findthatmeme
     shortcut: ftm
-    disabled: true
 
   - name: flickr
     categories: images
@@ -924,7 +920,6 @@ engines:
     base_url: https://directory.fsf.org/
     search_type: title
     timeout: 5.0
-    disabled: true
     about:
       website: https://directory.fsf.org/
       wikidata_id: Q2470288
@@ -1063,7 +1058,6 @@ engines:
     categories: [files, apps]
     shortcut: gpa
     play_categ: apps
-    disabled: true
 
   - name: google play movies
     engine: google_play
@@ -1100,7 +1094,6 @@ engines:
   - name: hackernews
     engine: hackernews
     shortcut: hn
-    disabled: true
 
   - name: hex
     engine: hex
@@ -1142,7 +1135,6 @@ engines:
   - name: huggingface
     engine: huggingface
     shortcut: hf
-    disabled: true
 
   - name: huggingface datasets
     huggingface_endpoint: datasets
@@ -1160,7 +1152,6 @@ engines:
     engine: imdb
     shortcut: imdb
     timeout: 6.0
-    disabled: true
 
   - name: imgur
     engine: imgur
@@ -1257,7 +1248,6 @@ engines:
     shortcut: zlib
     categories: files
     timeout: 7.0
-    disabled: true
 
   - name: library of congress
     engine: loc
@@ -1875,7 +1865,6 @@ engines:
     url_xpath: .//a[contains(@class,'result-link')]/@href
     title_xpath: .//span[contains(@class,'result-title-txt')]/text()
     content_xpath: ./p[@id='result-hightlight']
-    disabled: true
     about:
       website: https://searchmysite.net
 
@@ -2224,7 +2213,6 @@ engines:
     categories: [general, wikimedia]
     base_url: "https://{language}.wikiquote.org/"
     search_type: text
-    disabled: true
     additional_tests:
       rosebud: *test_rosebud
     about:
@@ -2380,7 +2368,6 @@ engines:
   - name: duden
     engine: duden
     shortcut: du
-    disabled: true
 
   - name: seznam
     shortcut: szn
@@ -2748,7 +2735,6 @@ engines:
     base_url: https://minecraft.wiki/
     api_path: "api.php"
     search_type: text
-    disabled: true
     about:
       website: https://minecraft.wiki/
       wikidata_id: Q105533483
