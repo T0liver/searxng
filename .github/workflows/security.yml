@@ -5,7 +5,7 @@ name: Security
 on:
   workflow_dispatch:
   schedule:
-    - cron: "42 05 * * *"
+#    - cron: "42 05 * * *"
 
 concurrency:
   group: ${{ github.workflow }}
